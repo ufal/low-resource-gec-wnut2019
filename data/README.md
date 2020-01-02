@@ -34,6 +34,6 @@ Data are generated using [generate_data_wrapper.sh](data/generate_data_wrapper.s
 - path to vocabulary tsv file (token\toccurence format)
 - max_chunks -- how many parallel jobs to run (to speed it up)
 
-It outputs both original and corrupted sentence separated with tabulator. If you use multiple parallel jobs, you should concatenate resulting files into one file.
+It outputs both original and corrupted sentence separated with tabulator.
 
 [Vocabularies](data/vocabularies) directory contains vocabulary files used in our experiments. [Sample_monolingual_data](data/sample_monolingual_data) then contains a file with 10 000 clean Czech sentences. In our experiments, we used WMT News Crawl Data (http://data.statmt.org/news-crawl/) for each language.
