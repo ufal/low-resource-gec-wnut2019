@@ -55,6 +55,6 @@ class ArtificialErrors(text_problems.Text2TextProblem):
                         yield {"inputs": chunks[1], "targets": chunks[0]}
         
         else:
-            yield {"inputs": "unk", "targets": "unk"}        
+            yield {"inputs": "unk", "targets": "unk"}
 
 
