@@ -15,17 +15,8 @@ This repository contains information on how to replicate our experiments on trai
   publisher = "Association for Computational Linguistics",
 }
 ```
-## Requirements
 
-Tensor2Tensor library is used for training neural machine translation system. We updated it so we can set input and target word-dropout rate and also edit-weighted MLE. 
-This can be cloned from https://github.com/arahusky/tensor2tensor (commit 075a590).
+## Content
 
-## Synthetic data generation 
-
-All information on how to generate artificial data can be found in [data](data) directory.
-
-## Training models
-
-## Using trained models for correcting text
-
-TODO
+- [data](data) -- information on how to generate artificial data
+- [training](training) -- information on how to train and infer model for GEC
