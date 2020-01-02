@@ -22,6 +22,19 @@ bash run_training.sh configs/cs_artificial_errors_config_base_single_gpu.sh
 
 which trains Transformer-BASE model on a single GPU for Czech GEC.
 
+## Using trained models for correcting text
+
+```
+t2t-decoder --data_dir $path_to_folder_with_generated_tfrecords_and_vocabulary \
+--problem artificial_errors --model transformer \
+--hparams_set transformer_base_single_gpu \
+--decode_hparams="beam_size=4,alpha=0.6" \
+--output_dir $path_to_folder_with_model_checkpoints \
+--decode_from_file=$path_to_file_to_correct \
+--decode_to_file=$output_file \
+--t2t_usr_dir=problems/      
+```
+
 ## Early stopping 
 
 We did not observe any overfitting when training models on (large enough) synthetic data. 
