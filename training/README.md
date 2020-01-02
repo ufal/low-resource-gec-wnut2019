@@ -38,5 +38,11 @@ t2t-decoder --data_dir $path_to_folder_with_generated_tfrecords_and_vocabulary \
 ## Early stopping 
 
 We did not observe any overfitting when training models on (large enough) synthetic data. 
-When fine-tuning with authentic data, overfitting is unfortunately a hot issue. 
+When finetuning with authentic data, overfitting is unfortunately a hot issue. 
 In our work, we modified the [run_training.sh](training/run_training.sh) script to save checkpoints more often (~10 minutes interval) and evaluated each checkpoint on development sets to estimate the stopping point.
+
+## Finetuning
+
+After (pre-)training model on synthetic data, you can finetune it on authentic data. 
+Similarly to pretraining, there is a [run_finetuning.sh](run_finetuning.sh) script which gets config file (see [finetune_cs_artificial_errors_config_base_single_gpu.sh](configs/finetune_cs_artificial_errors_config_base_single_gpu.sh)).
+
