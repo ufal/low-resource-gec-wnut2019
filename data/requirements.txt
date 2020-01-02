@@ -1,0 +1,2 @@
+aspell-python-py3==1.15
+numpy==1.18.0
