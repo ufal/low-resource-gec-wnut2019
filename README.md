@@ -20,17 +20,9 @@ This repository contains information on how to replicate our experiments on trai
 Tensor2Tensor library is used for training neural machine translation system. We updated it so we can set input and target word-dropout rate and also edit-weighted MLE. 
 This can be cloned from https://github.com/arahusky/tensor2tensor (commit 075a590).
 
-Additionaly, to generate synthetic data, you need ASpell with dictionary for each language. These can be (on Ubuntu) downloaded as 
-```apt-get install aspell-en
-apt-get install aspell-cs
-apt-get install aspell-ru
-apt-get install aspell-en
-apt-get install aspell-de
-```
-
 ## Synthetic data generation 
 
-TODO
+All information on how to generate artificial data can be found in [data](data) directory.
 
 ## Training models
 
