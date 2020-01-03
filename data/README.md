@@ -18,7 +18,7 @@ apt-get install aspell-en
 apt-get install aspell-de
 ```
 
-- [generate_data.sh](data/generate_data.sh) script activates environment with Python3 and supposes it to contain all packages from [requirements.txt](data/requirements.txt).
+- [generate_data.sh](generate_data.sh) script activates environment with Python3 and supposes it to contain all packages from [requirements.txt](requirements.txt).
 So either modify the script for your needs or run
 ```
 python3 -m venv ~/virtualenvs/aspell
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ## Generating Synthetic Data
 
-Data are generated using [generate_data_wrapper.sh](data/generate_data_wrapper.sh) script. This script stores several variables:
+Data are generated using [generate_data_wrapper.sh](generate_data_wrapper.sh) script. This script stores several variables:
 - character/token level corruption probabilities 
 - language (for ASpell)
 - path to clean monolingual data file (one sentence per line)
@@ -36,4 +36,4 @@ Data are generated using [generate_data_wrapper.sh](data/generate_data_wrapper.s
 
 It outputs both original and corrupted sentence separated with tabulator.
 
-[Vocabularies](data/vocabularies) directory contains vocabulary files used in our experiments. [Sample_monolingual_data](data/sample_monolingual_data) then contains a file with 10 000 clean Czech sentences. In our experiments, we used WMT News Crawl Data (http://data.statmt.org/news-crawl/) for each language.
+[Vocabularies](vocabularies) directory contains vocabulary files used in our experiments. [Sample_monolingual_data](sample_monolingual_data) then contains a file with 10 000 clean Czech sentences. In our experiments, we used WMT News Crawl Data (http://data.statmt.org/news-crawl/) for each language.
