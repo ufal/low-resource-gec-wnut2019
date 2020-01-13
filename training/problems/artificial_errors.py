@@ -52,8 +52,10 @@ class ArtificialErrors(text_problems.Text2TextProblem):
                             continue
                         chunks = line.split('\t')
                         if len(chunks) < 2:
+                            print("Provided file {} seems to have data in bad format. Skipping the line.".format(train_file))
                             print(chunks)
                             print(line)
+                            continue
                         yield {"inputs": chunks[1], "targets": chunks[0]}
         
         else:

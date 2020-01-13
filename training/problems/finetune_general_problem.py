@@ -87,8 +87,10 @@ class FinetuneGeneralProblem(text_problems.Text2TextProblem):
             for line in selected_artificial_lines:
                 chunks = line.split('\t')
                 if len(chunks) < 2:
+                    print("Line in artificial data does not contain original and corrected version. Skipping it.")
                     print(chunks)
                     print(line)
+                    continue
                 yield {"inputs": chunks[1], "targets": chunks[0]}
 
 
