@@ -52,6 +52,8 @@ class ArtificialErrors(text_problems.Text2TextProblem):
                             continue
                         chunks = line.split('\t')
                         if len(chunks) < 2:
+                            print(chunks)
+                            print(line)
                         yield {"inputs": chunks[1], "targets": chunks[0]}
         
         else:
