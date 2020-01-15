@@ -5,7 +5,11 @@ This folder stores scripts and data to train GEC system.
 ## Requirements
 
 Tensor2Tensor library is used for training neural machine translation system. We made several changes to it so we can set input and target word-dropout rate and also edit-weighted MLE. 
-You can install it from https://github.com/arahusky/tensor2tensor (commit 075a590).
+
+To install it, run:
+```
+pip install -r requirements.txt
+```
 
 ## Training models
 
